@@ -1,0 +1,14 @@
+{
+    "name": "bookweb",
+    "version": "1.0.0",
+    "main": "",
+    "scripts": {
+        "install-client": "cd client && npm install && npm run build && cd ..",
+        "install-server": "cd server && npm install && cd .. ",
+        "render-postbuild": "npm run install-client && npm run install-server",
+        "start": "npm start -prefix server"
+    },
+    "dependencies": {
+      
+    }
+}

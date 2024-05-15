@@ -1,0 +1,46 @@
+
+.containeru {
+  height: 100vh;
+  display: flex;
+  font-size: 30px;
+  justify-content: center;
+  align-items: center;
+}
+.cardu {
+  padding: 1rem;
+  height: 400px;
+  position: relative;
+  transform-style: preserve-3d;
+  transform: perspective(1000px);
+}
+.cardu::before {
+  position: absolute;
+  content: "";
+  top: 50%;
+  left: 50%;
+  height: 80%;
+  width: 80%;
+  background: #000;
+  filter: blur(60px);
+  transform: translate3d(-50%, -50%, -60px);
+}
+.cardu > img {
+  height: 100%;
+}
+.cardu .infou {
+  padding: 10px 26px;
+  position: absolute;
+  bottom: 4%;
+
+  color: rgb(0, 0, 0);
+  transform: translateZ(25px);
+}
+.cardu .infou > h1 {
+  font-size: 0.9rem;
+  font-family: "IBM Plex Mono", sans-serif;
+  line-height: 1.2rem;
+}
+.cardu .infou > p {
+  font-size: 0.55rem;
+  font-family: "IBM Plex Mono", sans-serif;
+}
